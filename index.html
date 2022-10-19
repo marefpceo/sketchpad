@@ -6,6 +6,7 @@
     <title>SketchPad</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -15,18 +16,18 @@
         <div class="main">
             <div class="grid-size">
                 <h2>Grid Size</h2>
-                <div id="currentSize">16x16</div>
+                <div id="currentSize"></div>
                 <button id="size-change">Change Size</button>
             </div>
     
-            <div class="canvas"></div>
+            <div class="draw-area"></div>
             
             <div class="color">
                 <h2>Color</h2>
                 <div class="colorSelect">
                     <div class="radioGroup">
                         <label for="black" id="black">Black</label>
-                        <input type="radio" id="black" name="color_type" value="black">
+                        <input type="radio" id="black" name="color_type" value="black" checked>
                     </div>
                     <div class="radioGroup">
                         <label for="random" id="random">Random</label>

@@ -13,7 +13,10 @@ header {
     padding: 0px;
     height: 100px;
     text-align: center;
-    font-size: 32px;
+}
+
+h1 {
+    font-size: 54px;
 }
 
 #size-change, #clear {
@@ -24,7 +27,13 @@ header {
     border: none;
     border-radius: 3px;
     height: 25px;
+    width: 120px;
     flex: inherit;
+    transition: 0.02s all;
+}
+
+#size-change:active, #clear:active {
+    transform: scale(0.9);
 }
 
 .container {
@@ -62,6 +71,11 @@ header {
 
 #currentSize {
     background-color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 95px;
+    height: 40px;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 3px;
@@ -77,11 +91,19 @@ header {
     color: #695d5d;
 }
 
+.radioGroup {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
 input[type=radio]{
     accent-color: #695d5d;
 }
 
-.canvas {
+.draw-area {
     background-color: #ffffff;
     width: 500px;
     height: 500px;
