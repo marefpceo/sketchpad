@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SketchPad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sketch Pad</h1>
+        </header>
+    
+        <div class="main">
+            <div class="grid-size">
+                <h2>Grid Size</h2>
+                <div id="currentSize">16x16</div>
+                <button id="size-change">Change Size</button>
+            </div>
+    
+            <div class="canvas"></div>
+            
+            <div class="color">
+                <h2>Color</h2>
+                <div class="colorSelect">
+                    <div class="radioGroup">
+                        <label for="black" id="black">Black</label>
+                        <input type="radio" id="black" name="color_type" value="black">
+                    </div>
+                    <div class="radioGroup">
+                        <label for="random" id="random">Random</label>
+                        <input type="radio" id="random" name="color_type" value="random">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="options">
+            <button id="clear">Clear</button>
+        </div>
+        <footer>Designed by Lamar Stevens</footer>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
