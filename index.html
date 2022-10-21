@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SketchPad</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -26,14 +27,17 @@
                 <h2>Color</h2>
                 <div class="colorSelect">
                     <div class="radioGroup">
-                        <label for="black" id="black">Black</label>
-                        <input type="radio" id="black" name="color_type" value="black" checked>
+                        <label for="black" id="blackLabel">Black</label>
+                        <input type="radio" id="black" name="color_type" value="black" checked onchange="colorSelect()">
                     </div>
                     <div class="radioGroup">
-                        <label for="random" id="random">Random</label>
-                        <input type="radio" id="random" name="color_type" value="random">
+                        <label for="random" id="randomLabel">Random</label>
+                        <input type="radio" id="random" name="color_type" value="random" onchange="colorSelect()">
                     </div>
-                    
+                    <div class="radioGroup">
+                        <label for="erase" id="eraseLabel">Erase</label>
+                        <input type="radio" id="erase" name="color_type" value="erase" onchange="colorSelect()">
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,8 +46,6 @@
             <button id="clear">Clear</button>
         </div>
         <footer>Designed by Lamar Stevens</footer>
-    </div>
-    
-    <script src="main.js"></script>
+    </div>  
 </body>
 </html>
