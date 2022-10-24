@@ -1,6 +1,8 @@
 const currentSize = document.querySelector('#currentSize');
 const main = document.querySelector('.main');
 const drawArea = document.querySelector('.draw-area');
+const colorPick = document.querySelector('#colorPick');
+const radioGroup = document.querySelectorAll('.radioGroup'); 
 
 const sizebtn = document.getElementById('size-change');
 const clearbtn = document.getElementById('clear');
@@ -48,25 +50,52 @@ function randomColor() {
 }
 
 
+// Calls colorSelect() function when a radio button is selected
+radioGroup.forEach((input) => {
+    input.addEventListener('change', () => {    
+        if (document.getElementById('select').checked){
+                enableColorPicker();
+                colorSelect();
+            } else {
+                disableColorPicker();
+                colorSelect();
+            }
+    });  
+});
+
+
 // Checks which radio button is selected and applies the corresponding 
 // background color when hovering over the grid
+// function colorSelect() {
 function colorSelect() {
-
-    if (document.getElementById('black').checked){
-        drawArea.addEventListener('mouseover', (event) => {
+    drawArea.addEventListener('mouseover', (event) => {
+        if (document.getElementById('black').checked) {
+            disableColorPicker();
             event.target.style.backgroundColor = '#000000';
-        });
-    }else if (document.getElementById('random').checked){
-        drawArea.addEventListener('mouseover', (event) => {
+        }else if (document.getElementById('random').checked) {
+            disableColorPicker();
             event.target.style.backgroundColor = randomColor();
-        });
-    }else {
-        drawArea.addEventListener('mouseover', (event) => {
+        }else if (document.getElementById('select').checked) {
+            enableColorPicker();
+            event.target.style.backgroundColor = colorPick.value;
+        }else {
+            disableColorPicker();
             event.target.style.backgroundColor = '#ffffff';
-        });
-    }
+        }
+    });
 }
 
+
+//Disable color picker
+function disableColorPicker() {
+    colorPick.disabled = true;
+}
+
+
+//Enables color picker
+function enableColorPicker() {
+    colorPick.disabled = false;
+}
 
 
 //Create divs for drawing area

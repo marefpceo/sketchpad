@@ -60,7 +60,7 @@ h1 {
 
 .grid-size, .color {
     width: 150px;
-    height: 200px;
+    height: 225px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -82,6 +82,10 @@ h1 {
     box-shadow: 0px 0px 5px 1px #695d5d inset;
 }
 
+.colorPicker {
+    text-align: center;
+
+}
 .colorSelect {
     display: flex;
     flex-direction: column;
