@@ -3,6 +3,8 @@
 Sketchpad is an online browser version of the popular Etch-A-Sketch toy. The 
 page default is set to a 16x16 canvas area. The user is able to draw on the canvas by pressing, and holding, the left mouse button while dragging across the screen.
 
+[Sketchpad Live Link](https://marefpceo.github.io/sketchpad/)
+
 ## Grid Size
 
 To change the grid size, select the 'Change Size' button on the left hand side. (Grid size ranges from 1 to 100) 
